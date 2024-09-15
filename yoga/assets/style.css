@@ -1,0 +1,326 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  border-radius: 5%;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.review-item {
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.info-alert {
+  background-color: #cce5ff;
+  color: #004085;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #b8daff;
+  border-radius: 4px;
+}
+
+.success-alert {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+}
+
+.error-alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  max-width: 100px;
+  display: block;
+  margin: 10px auto;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  color: white;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+  display: block;
+}
+
+.main-nav a:hover {
+  background-color: green;
+}
+
+main {
+  padding: 2em;
+}
+
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+  margin-top: 0.5em;
+}
+
+.thumbnail {
+  max-width: 30%;
+  margin: 1%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+/* ----------------------- */
+/* new */
+:root {
+  --primary-color: #15d936;
+  --primary-color-dark: #f7ebf3;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --extra-light: #fafafa;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.section__header {
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.section__subheader {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--text-light);
+  letter-spacing: 2px;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+/* header design */
+/* Ensure this part is at the end of the CSS file */
+.topHeader {
+  position: relative;
+  overflow: hidden; /* Ensure pseudo-element is visible within bounds */
+}
+
+.topHeader::before {
+  position: absolute;
+  content: "";
+  left: 0; /* Make sure it's positioned correctly */
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, var(--primary-color), transparent);
+  opacity: 0.2;
+  z-index: 0; /* Ensure it appears behind the content */
+}
+
+.header__container {
+  position: relative; /* Creates a stacking context for child elements */
+  z-index: 1; /* Ensure it appears above the ::before pseudo-element */
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.header__content {
+  z-index: 2; /* Ensure it appears above the background */
+}
+
+.header__image {
+  z-index: 1; /* Ensure it is above the pseudo-element but below content */
+}
+
+.header__image img {
+  max-width: 475px;
+  margin: auto;
+}
+
+/* end header design */
+
+/* end new */
+/* ----------------------- */
+
+@media (max-width: 768px) {
+  header img {
+    max-width: 70px;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumbnail {
+    max-width: 90%;
+    margin-bottom: 1em;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4caf50;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav a {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid white;
+  }
+
+  .main-nav a:first-child {
+    border-top: none;
+  }
+}
